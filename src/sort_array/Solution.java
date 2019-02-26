@@ -1,5 +1,5 @@
 package sort_array;
-
+//需要辅助空间
 public class Solution {
 
     public static void mergeSort(int[] arrays,int start,int end){//归并排序
@@ -11,14 +11,14 @@ public class Solution {
             return;
         }
 
-        //分两部分
+        //step1 分两部分
         int mid =  start + (end - start)/2;
 
-        //对两部分归并排序
+        //step2 对两部分归并排序
         mergeSort(arrays,start,mid);
         mergeSort(arrays,mid+1,end);
 
-        //对排序的两部分进行合并
+        //step3 对排序的两部分进行合并
         merge(arrays,start,mid,end);
     }
 
