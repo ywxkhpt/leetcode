@@ -9,7 +9,7 @@ public class Solution {
         if(head == null) return null;
         int count = 0;
         ListNode cur = head;
-        while(cur != null && count < k){//找出第k-1个结点
+        while(cur != null && count < k){//找出第k+1个结点
             cur = cur.next;
             count++;
         }
