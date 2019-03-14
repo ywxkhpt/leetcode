@@ -3,11 +3,12 @@ package binary_tree_inorder_traversal;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<>();
-        ArrayDeque<TreeNode> stack = new ArrayDeque<>();
+        Stack<TreeNode> stack = new Stack<>();
         while(!stack.isEmpty() || root != null){
             if (root != null){
                 stack.push(root);
@@ -19,5 +20,15 @@ public class Solution {
             }
         }
         return list;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        Solution solution = new Solution();
+        List<Integer> integers = solution.inorderTraversal(root);
+        for (int i :
+                integers) {
+            System.out.println(i);
+        }
     }
 }
