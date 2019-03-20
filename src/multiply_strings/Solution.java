@@ -20,4 +20,8 @@ public class Solution {
         for(int p : pos) if(!(sb.length() == 0 && p == 0)) sb.append(p);
         return sb.length() == 0 ? "0" : sb.toString();
     }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+    }
 }
