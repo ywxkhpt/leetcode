@@ -30,7 +30,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] A = {1,2,0};
+        int[] A = {2,0,2,1,1,0};
         Solution solution = new Solution();
         solution.sortColors(A);
     }

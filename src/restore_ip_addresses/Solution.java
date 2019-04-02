@@ -18,7 +18,7 @@ public class Solution {
         for (int i=1;i<4;i++){
             if (index + i > s.length()) break;//超出边界
             String ss = s.substring(index, index + i);
-            if ((ss.startsWith("0") && ss.length() > 1) || ( i ==3 && Integer.parseInt(ss) >= 256)) continue;
+            if ((ss.startsWith("0") && ss.length() > 1) || ( i == 3 && Integer.parseInt(ss) >= 256)) continue;
             helper(res,s,index + i,temp + ss + (count==3 ?"":"."),count+1);
         }
     }

@@ -1,7 +1,6 @@
 package permutations;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Solution {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
