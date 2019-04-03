@@ -13,7 +13,7 @@ public class Solution {
         helper(col,d1,d2,0,n);
         return count;
     }
-    //k记录放到第几一行
+    //k记录放到第几行
     private void helper(boolean[] col,boolean[] d1,boolean[] d2,int k,int n){
         if(k == n){//递归基
             count++;
