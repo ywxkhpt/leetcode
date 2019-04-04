@@ -9,6 +9,15 @@ package Best_Time_to_Buy_and_Sell_Stock_IV;
 public class Solution {
     public int maxProfit(int k, int[] prices) {
         if (k <= 0 || prices == null || prices.length == 0) return 0;
+        if (k >= prices.length / 2) {   // 这种情况下该问题退化为普通的股票交易问题
+            int maxProfit = 0;
+            for (int i = 1; i < prices.length; i++) {
+                if (prices[i] > prices[i - 1]) {
+                    maxProfit += prices[i] - prices[i - 1];
+                }
+            }
+            return maxProfit;
+        }
         int[][] dp = new int[k + 1][prices.length];
         //第一行第一列初始化全是0
         for (int i = 1; i < k + 1; i++) {
@@ -25,6 +34,15 @@ public class Solution {
 
     public int fastmaxProfit(int k, int[] prices) { //进行了优化
         if (k <= 0 || prices == null || prices.length == 0) return 0;
+        if (k >= prices.length / 2) {   // 这种情况下该问题退化为普通的股票交易问题
+            int maxProfit = 0;
+            for (int i = 1; i < prices.length; i++) {
+                if (prices[i] > prices[i - 1]) {
+                    maxProfit += prices[i] - prices[i - 1];
+                }
+            }
+            return maxProfit;
+        }
         int[][] dp = new int[k + 1][prices.length];
         //第一行第一列初始化全是0
         for (int i = 1; i < k + 1; i++) {
